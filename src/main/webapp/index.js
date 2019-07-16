@@ -11,6 +11,7 @@ $(document).ready(function() {
     navigation: true,
     navigationPosition: "right",
     autoScrolling:true,
+    scrollOverflow: true,
     scrollHorizontally: true
   });
   
@@ -23,17 +24,13 @@ $(document).ready(function() {
 
 $('.menu').click(function(e) {
   var targetText = $(e.target).text();
-  
   if (targetText.includes('Home')) {
     fullpage_api.moveTo(1);
   } else if (targetText.includes('About')) {
     fullpage_api.moveTo(2);
   } else if (targetText.includes('Projects')) {
     fullpage_api.moveTo(3);
-  } else {
-    fullpage_api.moveTo(4);
   } 
-  
 }) // click
 
 
