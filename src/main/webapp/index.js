@@ -6,13 +6,10 @@ $(document).ready(function() {
   
   $('#fullpage').fullpage({
     licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-    paddingTop: '70px',
-    loopBottom: true,
     navigation: true,
     navigationPosition: "right",
-    autoScrolling:true,
     scrollOverflow: true,
-    scrollHorizontally: true
+    scrollHorizontally: false
   });
   
   var typed = new Typed('.greeting-text', {
@@ -34,20 +31,11 @@ $('.menu').click(function(e) {
 }) // click
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$('.skill').hover(function(e) {
+  $(e.target).children().first().addClass('visible').removeClass('invisible');
+  
+  },function(e) {
+    $(e.target).addClass('invisible').removeClass('visible');
+});
 
 
