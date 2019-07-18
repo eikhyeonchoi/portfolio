@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
   
   var typed = new Typed('.greeting-text', {
-    strings: ['Web Developer 최익현의 포트폴리오 입니다.'],
+    strings: ['Web Developer 최익현의 포트폴리오 입니다'],
     typeSpeed: 120,
     showCursor: false,
   })
@@ -36,6 +36,9 @@ $('.skill').hover(function(e) {
   
   },function(e) {
     $(e.target).addClass('invisible').removeClass('visible');
+    if($(this).hasClass('invisible')) {
+      $(this).removeClass('invisible');
+    }
 });
 
 
